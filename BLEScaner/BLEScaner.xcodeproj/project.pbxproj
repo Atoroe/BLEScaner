@@ -11,6 +11,7 @@
 		56EF6C372997E3970071BA5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6C362997E3970071BA5E /* ContentView.swift */; };
 		56EF6C392997E3990071BA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EF6C382997E3990071BA5E /* Assets.xcassets */; };
 		56EF6C3C2997E3990071BA5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EF6C3B2997E3990071BA5E /* Preview Assets.xcassets */; };
+		56EF6C482997E6CF0071BA5E /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6C472997E6CF0071BA5E /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		56EF6C362997E3970071BA5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56EF6C382997E3990071BA5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56EF6C3B2997E3990071BA5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56EF6C472997E6CF0071BA5E /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EF6C4B2997E8310071BA5E /* CombineCoreBluetooth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		56EF6C332997E3970071BA5E /* BLEScaner */ = {
 			isa = PBXGroup;
 			children = (
+				56EF6C4F2997EEB20071BA5E /* Info.plist */,
 				56EF6C342997E3970071BA5E /* AppMain.swift */,
 				56EF6C362997E3970071BA5E /* ContentView.swift */,
 				56EF6C432997E3E10071BA5E /* Logic */,
@@ -80,6 +84,7 @@
 		56EF6C432997E3E10071BA5E /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				56EF6C472997E6CF0071BA5E /* BluetoothManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -107,6 +112,9 @@
 			dependencies = (
 			);
 			name = BLEScaner;
+			packageProductDependencies = (
+				56EF6C4A2997E8310071BA5E /* CombineCoreBluetooth */,
+			);
 			productName = BLEScaner;
 			productReference = 56EF6C312997E3970071BA5E /* BLEScaner.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 56EF6C282997E3960071BA5E;
+			packageReferences = (
+				56EF6C492997E8310071BA5E /* XCRemoteSwiftPackageReference "CombineCoreBluetooth" */,
+			);
 			productRefGroup = 56EF6C322997E3970071BA5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EF6C372997E3970071BA5E /* ContentView.swift in Sources */,
+				56EF6C482997E6CF0071BA5E /* BluetoothManager.swift in Sources */,
 				56EF6C352997E3970071BA5E /* AppMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +303,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BLEScaner/Preview Content\"";
-				DEVELOPMENT_TEAM = K8BQ4BV4WH;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BLEScaner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -320,10 +332,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BLEScaner/Preview Content\"";
-				DEVELOPMENT_TEAM = K8BQ4BV4WH;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BLEScaner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -363,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56EF6C492997E8310071BA5E /* XCRemoteSwiftPackageReference "CombineCoreBluetooth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StarryInternet/CombineCoreBluetooth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56EF6C4A2997E8310071BA5E /* CombineCoreBluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56EF6C492997E8310071BA5E /* XCRemoteSwiftPackageReference "CombineCoreBluetooth" */;
+			productName = CombineCoreBluetooth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56EF6C292997E3960071BA5E /* Project object */;
 }
