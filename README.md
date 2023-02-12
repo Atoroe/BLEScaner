@@ -1,3 +1,3 @@
 # BLEScaner
 
-Before you start coding, you’ll need to set the Team for your project.
+Before you start the project, you’ll need to set the Team for the project.
